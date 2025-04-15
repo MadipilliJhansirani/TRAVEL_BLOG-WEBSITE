@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Travel Blog</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#blog-posts">Destinations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Explore the World with Me</h2>
+    <p>Discover amazing places, hidden gems, and travel tips.</p>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+</section>
+
+<section id="blog-posts">
+    <h2>Latest Blog Posts</h2>
+
+    <!-- Post 1 -->
+    <article class="post">
+        <h2>Exploring the Beaches of Maldives</h2>
+        <p class="date">Published: March 30, 2025</p>
+        <img src="images/maldives.jpg" alt="Maldives Beach">
+        <p>The Maldives offers crystal-clear waters, stunning beaches, and luxury resorts.</p>
+        <button class="like-btn">❤️ Like (<span class="like-count">0</span>)</button>
+        <div class="comment-section">
+            <input type="text" class="comment-name" placeholder="Your Name">
+            <textarea class="comment-text" placeholder="Write a comment..."></textarea>
+            <button class="comment-submit">Post Comment</button>
+            <ul class="comment-list"></ul>
+        </div>
+    </article>
+
+    <!-- Post 2 -->
+    <article class="post">
+        <h2>A Trip Through the Streets of Paris</h2>
+        <p class="date">Published: March 28, 2025</p>
+        <img src="images/paris.jpg" alt="Paris Street">
+        <p>Paris is a city of romance, history, and culture.</p>
+        <button class="like-btn">❤️ Like (<span class="like-count">0</span>)</button>
+        <div class="comment-section">
+            <input type="text" class="comment-name" placeholder="Your Name">
+            <textarea class="comment-text" placeholder="Write a comment..."></textarea>
+            <button class="comment-submit">Post Comment</button>
+            <ul class="comment-list"></ul>
+        </div>
+    </article>
+
+    <!-- Post 3 -->
+    <article class="post">
+        <h2>Relaxing in the Parks of London</h2>
+        <p class="date">Published: April 10, 2025</p>
+        <img src="images/london-park .jpg" alt="London Park">
+        <p>London's parks, like Hyde Park and Regent's Park, offer peaceful greenery and scenic walking paths.</p>
+        <button class="like-btn">❤️ Like (<span class="like-count">0</span>)</button>
+        <div class="comment-section">
+            <input type="text" class="comment-name" placeholder="Your Name">
+            <textarea class="comment-text" placeholder="Write a comment..."></textarea>
+            <button class="comment-submit">Post Comment</button>
+            <ul class="comment-list"></ul>
+        </div>
+    </article>
+
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+        <p id="form-message"></p>
+    </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

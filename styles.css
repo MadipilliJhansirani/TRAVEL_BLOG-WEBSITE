@@ -1,0 +1,256 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 10px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.post {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.post img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.like-btn {
+  background-color: #e91e63;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease;
+}
+
+.like-btn:hover {
+  transform: scale(1.05);
+}
+
+.comment-section {
+  margin-top: 15px;
+}
+
+.comment-section input,
+.comment-section textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comment-submit {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-submit:hover {
+  background-color: #218838;
+}
+
+.comment-list {
+  margin-top: 10px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.comment-list li {
+  background-color: #f7f7f7;
+  padding: 8px 10px;
+  border-radius: 5px;
+  margin-top: 6px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+
+#form-message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background-color: #222;
+}
+
+.dark-mode nav a {
+  color: #e0e0e0;
+}
+
+.dark-mode section {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .like-btn {
+  background-color: #ff4081;
+}
+
+.dark-mode .comment-submit {
+  background-color: #4caf50;
+}
+
+.dark-mode .comment-list li {
+  background-color: #2a2a2a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  .like-btn,
+  .comment-submit,
+  #contact-form button {
+    width: 100%;
+  }
+}
+/* Touch pop animation */
+.touch-pop {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ripple effect */
+.ripple {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* Make buttons relative for ripple */
+.like-btn,
+.comment-submit {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shake animation for form validation */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
